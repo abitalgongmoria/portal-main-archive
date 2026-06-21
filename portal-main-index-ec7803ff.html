@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咪咕体育 · 持续关注 · 再次访问</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f3f4f8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .page-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 0, 0, 0.04);
+            padding: 3.5rem 2rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid #ecedf2;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0b1d31;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #205a8a 0%, #2d7fb9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subhead {
+            font-size: 1.1rem;
+            color: #4a5a6e;
+            max-width: 660px;
+            margin: 0.8rem auto 0;
+            border-top: 1px solid #e6e8ee;
+            padding-top: 1rem;
+        }
+
+        /* ===== Card grid ===== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 1.5rem 2rem;
+            border: 1px solid #eaecef;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01), 0 1px 3px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s ease, transform 0.15s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0, 20, 30, 0.06);
+            transform: translateY(-2px);
+        }
+
+        .card-icon {
+            font-size: 2.2rem;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0c1e31;
+            margin-bottom: 0.65rem;
+            border-left: 4px solid #2d7fb9;
+            padding-left: 0.6rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #2f3e52;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p.small-note {
+            font-size: 0.85rem;
+            color: #65768c;
+            margin-top: 0.5rem;
+        }
+
+        .card .tag {
+            display: inline-block;
+            background: #eef2f9;
+            color: #1d4a73;
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            margin-right: 0.3rem;
+            margin-top: 0.4rem;
+        }
+
+        /* ===== Double column ===== */
+        .double-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card-wide {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 700px) {
+            .double-col {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== FAQ style ===== */
+        .faq-mini {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 1.8rem 2rem;
+            border: 1px solid #eaecef;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+        }
+
+        .faq-mini h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: #0b1d31;
+            border-bottom: 1px solid #e9eaef;
+            padding-bottom: 0.6rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #1e374e;
+            margin-bottom: 0.15rem;
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+            color: #3a4b60;
+        }
+
+        /* ===== Link sentence ===== */
+        .link-sentence {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.5rem 2rem;
+            margin-top: 2.5rem;
+            border: 1px solid #ecedf2;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+            font-size: 1rem;
+            color: #1e2a3a;
+        }
+
+        .link-sentence a {
+            color: #1d5d8a;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid #b8cde0;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .link-sentence a:hover {
+            color: #0a3a5c;
+            border-bottom-color: #0a3a5c;
+        }
+
+        /* ===== Footer ===== */
+        .footer-note {
+            margin-top: 3rem;
+            text-align: center;
+            color: #6f7f94;
+            font-size: 0.8rem;
+            border-top: 1px solid #e3e5eb;
+            padding-top: 1.8rem;
+        }
+
+        /* responsive tiny */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero {
+                padding: 2rem 1rem;
+            }
+            body {
+                padding: 1rem 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <!-- Hero -->
+        <div class="hero">
+            <h1>再访 · <span>咪咕体育</span></h1>
+            <div class="subhead">
+                赛事聚合、收藏与持续关注 —— 一个为深度体育爱好者准备的信息节点。
+            </div>
+        </div>
+
+        <!-- 用途卡片 + 适合人群 两列布局 -->
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <h2>用途卡片</h2>
+                <p>实时比分、赛程追踪、录像回放、数据统计、深度专栏…… 平台将核心体育内容整合为可随时查阅的模块。</p>
+                <p>适合赛前研究、赛中跟进、赛后复盘，节省在多平台之间切换的时间。</p>
+                <div>
+                    <span class="tag">中超</span>
+                    <span class="tag">CBA</span>
+                    <span class="tag">欧冠</span>
+                    <span class="tag">网球</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">👥</div>
+                <h2>适合人群</h2>
+                <p>长期关注国内联赛的球迷、多项目交叉爱好者、需要快速获取比赛信息的从业者或内容创作者。</p>
+                <p>同时也适合那些希望在一个界面内完成“关注‑收藏‑再次打开”动作的轻量用户。</p>
+                <p class="small-note">无论你习惯每周固定时间看直播，还是碎片化浏览战报，都能找到合适的入口。</p>
+            </div>
+        </div>
+
+        <!-- 双列：主视觉 + FAQ摘要 -->
+        <div class="double-col">
+            <div class="card card-wide" style="grid-column: span 2;">
+                <div class="card-icon">⚽</div>
+                <h2>主视觉 · 赛事流</h2>
+                <p>信息首页以卡片式时间线呈现当日重点赛事，支持按联赛、时间、热度筛选。每个赛事卡片包含对阵、实时状态、关键事件节点与相关视频入口。收藏赛事后自动加入个人关注列表，下次访问时优先展示。</p>
+                <p style="margin-top: 0.5rem;">页面布局强调信息密度，同时保留留白，避免视觉疲劳。顶部导航固定收藏夹与历史浏览，便于快速回到上次浏览位置。</p>
+            </div>
+        </div>
+
+        <!-- FAQ摘要 独立卡片 -->
+        <div class="faq-mini">
+            <h2>FAQ · 关于再次访问与收藏</h2>
+            <div class="faq-item">
+                <strong>为什么需要收藏赛事或球队？</strong>
+                <p>收藏后相关赛程、积分变化、转会动态将自动归入个人面板，无需重复搜索。再次访问时首页直接展示你关注的内容。</p>
+            </div>
+            <div class="faq-item">
+                <strong>页面是否支持跨设备同步？</strong>
+                <p>登录同一账号后，关注列表、浏览记录、偏好设置在网页端与移动端保持一致，适合在不同场景下继续浏览。</p>
+            </div>
+            <div class="faq-item">
+                <strong>信息更新频率如何？</strong>
+                <p>比赛期间实时推送关键事件（进球、红牌、比赛结束），赛后15分钟内生成战报与集锦。数据源每日多次校准。</p>
+            </div>
+        </div>
+
+        <!-- 自然链接段落 -->
+        <div class="link-sentence">
+            如果你已经熟悉平台的基本功能，或者希望直接从当前赛事出发，可以考虑将
+            <a href="https://portal-main-migu.com">咪咕体育</a> 加入浏览器书签，以便在赛季进行中快速回到个人关注流。
+            无论是为了追踪一支球队的完整赛季，还是偶然想起某场经典对决的重播，保持入口在手总会更省力。
+        </div>
+
+        <!-- 底栏 -->
+        <div class="footer-note">
+            页面方向 · 信息卡片式 · 浅灰背景 &middot; 再次访问与收藏视角
+        </div>
+    </div>
+</body>
+</html>
